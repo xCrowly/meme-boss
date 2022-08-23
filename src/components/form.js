@@ -8,14 +8,16 @@ let stateBottom = '';
 export default function Form() {
 
     // To Export a string used to change top text
-    function changeTop() {
-        stateTop = document.forms["my-form"]['top-text'].value;
+    function changeTop(event) {
+        stateTop = event.target.value;
+        // stateTop = document.forms["my-form"]['top-text'].value;
         renderText();
     }
 
     // To Export a string used to change bottom text
-    function changeBottom() {
-        stateBottom = document.forms["my-form"]['bottom-text'].value;
+    function changeBottom(event) {
+        stateBottom = event.target.value;
+        // stateBottom = document.forms["my-form"]['bottom-text'].value;
         renderText();
     }
 
